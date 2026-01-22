@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tracker - Облік Подій</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Event Tracker</h1>
+
+        <div class="card">
+            <h2>➕ Додати подію</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="eventName">Назва події:</label>
+                    <input type="text" id="eventName" required placeholder="Введіть назву події">
+                </div>
+                <div class="form-group">
+                    <label for="eventType">Тип події:</label>
+                    <select id="eventType" required>
+                        <option value="">Оберіть тип</option>
+                        <option value="click">Click</option>
+                        <option value="lead">Lead</option>
+                        <option value="sale">Sale</option>
+                    </select>
+                </div>
+                <button type="submit">Додати подію</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>📈 Статистика</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">Всього подій</div>
+                    <div class="stat-value" id="totalEvents">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Clicks</div>
+                    <div class="stat-value" id="clickCount">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Leads</div>
+                    <div class="stat-value" id="leadCount">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Sales</div>
+                    <div class="stat-value" id="saleCount">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📋 Список подій</h2>
+            <div id="eventsTableContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
